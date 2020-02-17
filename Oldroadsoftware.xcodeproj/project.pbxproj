@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		563E0CD023FA20A600FF80CE /* SplachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563E0CCF23FA20A600FF80CE /* SplachViewController.swift */; };
 		563E0CD223FA20C800FF80CE /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563E0CD123FA20C800FF80CE /* QRReaderViewController.swift */; };
 		563E0CD423FA20D600FF80CE /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563E0CD323FA20D600FF80CE /* WebViewController.swift */; };
+		563E0CD723FA221A00FF80CE /* QRCodeReader in Frameworks */ = {isa = PBXBuildFile; productRef = 563E0CD623FA221A00FF80CE /* QRCodeReader */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				563E0CD723FA221A00FF80CE /* QRCodeReader in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = Oldroadsoftware;
+			packageProductDependencies = (
+				563E0CD623FA221A00FF80CE /* QRCodeReader */,
+			);
 			productName = Oldroadsoftware;
 			productReference = 563E0CB823FA200500FF80CE /* Oldroadsoftware.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 563E0CAF23FA200500FF80CE;
+			packageReferences = (
+				563E0CD523FA221A00FF80CE /* XCRemoteSwiftPackageReference "QRCodeReader.swift" */,
+			);
 			productRefGroup = 563E0CB923FA200500FF80CE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -346,6 +354,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		563E0CD523FA221A00FF80CE /* XCRemoteSwiftPackageReference "QRCodeReader.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yannickl/QRCodeReader.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		563E0CD623FA221A00FF80CE /* QRCodeReader */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 563E0CD523FA221A00FF80CE /* XCRemoteSwiftPackageReference "QRCodeReader.swift" */;
+			productName = QRCodeReader;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 563E0CB023FA200500FF80CE /* Project object */;
 }
