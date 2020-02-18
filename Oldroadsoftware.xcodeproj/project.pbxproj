@@ -13,7 +13,6 @@
 		563E0CC523FA200700FF80CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 563E0CC423FA200700FF80CE /* Assets.xcassets */; };
 		563E0CC823FA200700FF80CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 563E0CC623FA200700FF80CE /* LaunchScreen.storyboard */; };
 		563E0CD023FA20A600FF80CE /* SplachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563E0CCF23FA20A600FF80CE /* SplachViewController.swift */; };
-		563E0CD223FA20C800FF80CE /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563E0CD123FA20C800FF80CE /* QRReaderViewController.swift */; };
 		563E0CD423FA20D600FF80CE /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563E0CD323FA20D600FF80CE /* WebViewController.swift */; };
 		563E0CD723FA221A00FF80CE /* QRCodeReader in Frameworks */ = {isa = PBXBuildFile; productRef = 563E0CD623FA221A00FF80CE /* QRCodeReader */; };
 		568A907A23FBB224006EC814 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A907923FBB224006EC814 /* Extension.swift */; };
@@ -28,7 +27,6 @@
 		563E0CC723FA200700FF80CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		563E0CC923FA200700FF80CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		563E0CCF23FA20A600FF80CE /* SplachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplachViewController.swift; sourceTree = "<group>"; };
-		563E0CD123FA20C800FF80CE /* QRReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
 		563E0CD323FA20D600FF80CE /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		568A907123FBAD51006EC814 /* OldroadsoftwareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldroadsoftwareTests.swift; sourceTree = "<group>"; };
 		568A907323FBAD51006EC814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 				563E0CC123FA200500FF80CE /* Main.storyboard */,
 				563E0CCF23FA20A600FF80CE /* SplachViewController.swift */,
 				568A907923FBB224006EC814 /* Extension.swift */,
-				563E0CD123FA20C800FF80CE /* QRReaderViewController.swift */,
 				563E0CD323FA20D600FF80CE /* WebViewController.swift */,
 				563E0CC423FA200700FF80CE /* Assets.xcassets */,
 				563E0CC623FA200700FF80CE /* LaunchScreen.storyboard */,
@@ -169,7 +166,6 @@
 			files = (
 				563E0CD423FA20D600FF80CE /* WebViewController.swift in Sources */,
 				563E0CBC23FA200500FF80CE /* AppDelegate.swift in Sources */,
-				563E0CD223FA20C800FF80CE /* QRReaderViewController.swift in Sources */,
 				568A907A23FBB224006EC814 /* Extension.swift in Sources */,
 				563E0CBE23FA200500FF80CE /* SceneDelegate.swift in Sources */,
 				563E0CD023FA20A600FF80CE /* SplachViewController.swift in Sources */,

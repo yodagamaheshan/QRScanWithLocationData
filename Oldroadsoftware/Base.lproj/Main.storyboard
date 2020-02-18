@@ -49,21 +49,6 @@
             </objects>
             <point key="canvasLocation" x="844.92753623188412" y="105.80357142857143"/>
         </scene>
-        <!--Reader View Controller-->
-        <scene sceneID="Nz6-U0-Kui">
-            <objects>
-                <viewController id="ueV-oq-dGx" customClass="QRReaderViewController" customModule="Oldroadsoftware" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KcH-gA-Led">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="IJr-VO-HW6"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lAq-04-5tF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1560.8695652173915" y="105.80357142857143"/>
-        </scene>
         <!--Web View Controller-->
         <scene sceneID="5ON-Wk-1TF">
             <objects>
@@ -102,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8Q-sq-2Vz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2305.7971014492755" y="99.776785714285708"/>
+            <point key="canvasLocation" x="1686" y="106"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kbq-0j-8pD">
