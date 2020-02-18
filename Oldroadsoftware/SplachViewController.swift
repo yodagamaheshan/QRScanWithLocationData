@@ -13,12 +13,20 @@ import CoreLocation
 
 class SplachViewController: UIViewController {
     
+    var lon: String?
+    var lat: String?
+    
     let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        lon = nil
+        lat = nil
     }
     
     lazy var readerVC: QRCodeReaderViewController = {
@@ -38,7 +46,7 @@ class SplachViewController: UIViewController {
     
     @IBAction func scanAction(_ sender: Any) {
         
-        
+
         if canGetLocation(){
             locationManager.requestLocation()
         }
@@ -49,11 +57,13 @@ class SplachViewController: UIViewController {
         
         // Or by using the closure pattern
         readerVC.completionBlock = { (result: QRCodeReaderResult?) in
-            if let  value = result?.value{
+            if let  value = result?.value, self.validateData(data: value){
                 let data = self.getData(from: value)
                 let baseUrl = data[0]
                 let labelNumber = data[1]
                 self.goToWebView(with: baseUrl, labelNumber: labelNumber, lat: "48.8328516", lon: "2.7269344 ")
+            }else{
+                self.showAllert(with: "Alert" , and: "Wrong QR code" )
             }
             
         }
@@ -84,6 +94,15 @@ class SplachViewController: UIViewController {
         vc.lon = lon
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func validateData(data: String) -> Bool{
+        
+        if !data.contains("/c/") || getData(from: data).count != 2 {
+            return false
+        }
+        
+        return true
+    }
 }
 
 extension SplachViewController: QRCodeReaderViewControllerDelegate{
@@ -96,6 +115,8 @@ extension SplachViewController: QRCodeReaderViewControllerDelegate{
     
     func readerDidCancel(_ reader: QRCodeReaderViewController) {
         locationManager.stopUpdatingLocation()
+        lon = nil
+        lat = nil
     }
 }
 
