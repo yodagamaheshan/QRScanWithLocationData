@@ -25,7 +25,7 @@ class SplachViewController: UIViewController {
         super.viewDidLoad()
         locationManager.delegate = self
         didHaveToAskUserForPermisionTogetLocationDataIfUserHaventAllow()
-            locationManager.startUpdatingLocation()
+        locationManager.startUpdatingLocation()
         
     }
     
@@ -40,7 +40,7 @@ class SplachViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         removeLastVAlues()
     }
-        
+    
     lazy var readerVC: QRCodeReaderViewController = {
         let builder = QRCodeReaderViewControllerBuilder {
             $0.reader = QRCodeReader(metadataObjectTypes: [.qr], captureDevicePosition: .back)
@@ -89,10 +89,6 @@ class SplachViewController: UIViewController {
         return true
     }
     
-    func generateAppropriateMessageAboutLocation(){
-        
-    }
-    
     func getData(from scanedData: String) ->[String] {
         return scanedData.components(separatedBy: "c/")
     }
@@ -139,7 +135,7 @@ extension SplachViewController: QRCodeReaderViewControllerDelegate{
                         alert.addAction(action)
                         self.present(alert, animated: true, completion: nil)
                     }
-                
+                    
                     
                 }
             }
@@ -155,7 +151,6 @@ extension SplachViewController: QRCodeReaderViewControllerDelegate{
     func readerDidCancel(_ reader: QRCodeReaderViewController) {
         locationManager.stopUpdatingLocation()
         removeLastVAlues()
-        
     }
 }
 
