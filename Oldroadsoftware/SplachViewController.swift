@@ -62,8 +62,6 @@ class SplachViewController: UIViewController {
                 let baseUrl = data[0]
                 let labelNumber = data[1]
                 self.goToWebView(with: baseUrl, labelNumber: labelNumber, lat: "48.8328516", lon: "2.7269344 ")
-            }else{
-                self.showAllert(with: "Alert" , and: "Wrong QR code" )
             }
             
         }
@@ -123,8 +121,8 @@ extension SplachViewController: QRCodeReaderViewControllerDelegate{
 extension SplachViewController: CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print(locations.last?.coordinate.latitude)
-         print(locations.last?.coordinate.longitude)
+        lat = String(Double((locations.last?.coordinate.latitude)!))
+        lon = String(Double((locations.last?.coordinate.longitude)!))
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
