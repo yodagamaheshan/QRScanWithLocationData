@@ -19,17 +19,12 @@
                                 <rect key="frame" x="82" y="215" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lbQ-Ql-uU6" secondAttribute="height" multiplier="1:1" id="GhF-2m-BdF"/>
-                                    <constraint firstAttribute="width" constant="250" id="cdn-uE-Z2s"/>
-                                    <constraint firstAttribute="height" constant="250" id="yos-MQ-szT"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D88-T5-OGZ">
-                                <rect key="frame" x="122" y="542" width="170" height="51"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="WiB-3K-hkG"/>
-                                </constraints>
+                                <rect key="frame" x="117.5" y="542" width="179" height="64"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="43"/>
-                                <state key="normal" title="QR Scan"/>
+                                <state key="normal" title="Scan QR "/>
                                 <connections>
                                     <action selector="scanAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U4s-D5-G2j"/>
                                 </connections>
