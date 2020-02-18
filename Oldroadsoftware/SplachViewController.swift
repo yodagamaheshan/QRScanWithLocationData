@@ -20,13 +20,8 @@ class SplachViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (CLLocationManager.locationServicesEnabled()){
-            locationManager.delegate = self
-            locationManager.requestWhenInUseAuthorization()
-             locationManager.startUpdatingLocation()
-        }else {
-            self.showAllert(with: "Enabling the Location Services", and: "Enabling the Location Services switch in Settings > Privacy")
-        }
+        locationManager.delegate = self
+        askUserForPermisionTogetLocationDataIfUserHaventAllow()
         
     }
     
@@ -51,8 +46,6 @@ class SplachViewController: UIViewController {
     }()
     
     @IBAction func scanAction(_ sender: Any) {
-        // Retrieve the QRCode content
-        // By using the delegate pattern
         readerVC.delegate = self
         
         // Or by using the closure pattern
@@ -71,9 +64,22 @@ class SplachViewController: UIViewController {
         present(readerVC, animated: true, completion: nil)
     }
     
-    //TODO: implement these methods
-    func canGetLocation() -> Bool{
-        return true
+    func askUserForPermisionTogetLocationDataIfUserHaventAllow(){
+        if CLLocationManager.locationServicesEnabled(){
+            
+            if (CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+                CLLocationManager.authorizationStatus() == .authorizedAlways){
+                
+                locationManager.startUpdatingLocation()
+            }
+            else{
+                locationManager.requestWhenInUseAuthorization()
+            }
+            
+        }
+        else{
+            self.showAllert(with: "Enabling the Location Services", and: "Enabling the Location Services switch in Settings > Privacy")
+        }
     }
     
     func generateAppropriateMessageAboutLocation(){
