@@ -66,9 +66,6 @@ class SplachViewController: UIViewController {
         
     }
     
-    func showAllert(with message: String) {
-        
-    }
 }
 
 extension SplachViewController: QRCodeReaderViewControllerDelegate{
