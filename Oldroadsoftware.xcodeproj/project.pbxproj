@@ -29,6 +29,8 @@
 		563E0CCF23FA20A600FF80CE /* SplachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplachViewController.swift; sourceTree = "<group>"; };
 		563E0CD123FA20C800FF80CE /* QRReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
 		563E0CD323FA20D600FF80CE /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		568A907123FBAD51006EC814 /* OldroadsoftwareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldroadsoftwareTests.swift; sourceTree = "<group>"; };
+		568A907323FBAD51006EC814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				563E0CBA23FA200500FF80CE /* Oldroadsoftware */,
+				568A907023FBAD51006EC814 /* OldroadsoftwareTests */,
 				563E0CB923FA200500FF80CE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,6 +76,15 @@
 				563E0CC923FA200700FF80CE /* Info.plist */,
 			);
 			path = Oldroadsoftware;
+			sourceTree = "<group>";
+		};
+		568A907023FBAD51006EC814 /* OldroadsoftwareTests */ = {
+			isa = PBXGroup;
+			children = (
+				568A907123FBAD51006EC814 /* OldroadsoftwareTests.swift */,
+				568A907323FBAD51006EC814 /* Info.plist */,
+			);
+			path = OldroadsoftwareTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
