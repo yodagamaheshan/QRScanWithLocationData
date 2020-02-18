@@ -49,7 +49,13 @@ class SplachViewController: UIViewController {
         
         // Or by using the closure pattern
         readerVC.completionBlock = { (result: QRCodeReaderResult?) in
-            print(result)
+            if let  value = result?.value{
+                let data = self.getData(from: value)
+                let baseUrl = data[0]
+                let labelNumber = data[1]
+                self.goToWebView(with: baseUrl, labelNumber: labelNumber, lat: "48.8328516", lon: "2.7269344 ")
+            }
+            
         }
         
         // Presents the readerVC as modal form sheet
@@ -70,6 +76,14 @@ class SplachViewController: UIViewController {
       return scanedData.components(separatedBy: "c/")
     }
     
+    func goToWebView(with baseURL: String, labelNumber: String, lat: String, lon: String){
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: WebViewController.self)) as! WebViewController
+        vc.baseURL = baseURL
+        vc.labelNumber = labelNumber
+        vc.lat = lat
+        vc.lon = lon
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension SplachViewController: QRCodeReaderViewControllerDelegate{
