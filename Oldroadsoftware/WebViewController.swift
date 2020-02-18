@@ -27,6 +27,8 @@ class WebViewController: UIViewController {
             let myURL = getURL(baseUrlStringWithScheme: baseURL!, with: labelNumber!, latiyude: lat!, and: lon!){
             let myRequest = URLRequest(url: myURL)
             webView.load(myRequest)
+        }else{
+            showAllert(with: "Alert", and: "URL is wrong")
         }
         
     }
