@@ -143,10 +143,12 @@ extension SplachViewController: QRCodeReaderViewControllerDelegate{
                     
                 }
             }
+        }else{
+            reader.stopScanning()
+            dismiss(animated: true, completion: nil)
+            showAllert(with: "Alert", and: "Wrong QR code")
         }
-        reader.stopScanning()
         
-        dismiss(animated: true, completion: nil)
         
     }
     
