@@ -66,8 +66,8 @@ class SplachViewController: UIViewController {
         
     }
     
-    func getData(from scanedData: String) {
-        
+    func getData(from scanedData: String) ->[String] {
+      return scanedData.components(separatedBy: "c/")
     }
     
 }
