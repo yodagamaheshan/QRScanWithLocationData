@@ -66,6 +66,10 @@ class SplachViewController: UIViewController {
         
     }
     
+    func getData(from scanedData: String) {
+        
+    }
+    
 }
 
 extension SplachViewController: QRCodeReaderViewControllerDelegate{
