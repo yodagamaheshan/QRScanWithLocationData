@@ -20,8 +20,14 @@ class SplachViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
+        if (CLLocationManager.locationServicesEnabled()){
+            locationManager.delegate = self
+            locationManager.requestWhenInUseAuthorization()
+             locationManager.startUpdatingLocation()
+        }else {
+            self.showAllert(with: "Enabling the Location Services", and: "Enabling the Location Services switch in Settings > Privacy")
+        }
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -45,12 +51,6 @@ class SplachViewController: UIViewController {
     }()
     
     @IBAction func scanAction(_ sender: Any) {
-        
-
-        if canGetLocation(){
-            locationManager.requestLocation()
-        }
-        
         // Retrieve the QRCode content
         // By using the delegate pattern
         readerVC.delegate = self
