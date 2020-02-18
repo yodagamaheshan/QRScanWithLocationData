@@ -49,7 +49,8 @@ class WebViewController: UIViewController {
     }
 }
 extension WebViewController: WKNavigationDelegate{
-    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         indicator.stopAnimating()
     }
 }
