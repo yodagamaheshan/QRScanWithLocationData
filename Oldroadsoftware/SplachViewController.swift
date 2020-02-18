@@ -121,6 +121,8 @@ extension SplachViewController: QRCodeReaderViewControllerDelegate{
             let baseUrl = data[0]
             let labelNumber = data[1]
             if self.lastLat != nil, self.lastLon != nil{
+                reader.stopScanning()
+                dismiss(animated: true, completion: nil)
                 self.goToWebView(with: baseUrl, labelNumber: labelNumber, lat: self.lastLat! , lon: self.lastLon!)
             }
             else{
@@ -133,6 +135,14 @@ extension SplachViewController: QRCodeReaderViewControllerDelegate{
                             self.locationManager.stopUpdatingLocation()
                         }
                         alert.addAction(action)
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                    else{
+                        let alert = UIAlertController(title: "Location Service", message: "Allow location service in privacy", preferredStyle: .alert)
+                        let alertAction = UIAlertAction(title: "Setting", style: .default) { (action) in
+                            UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!)
+                        }
+                        alert.addAction(alertAction)
                         self.present(alert, animated: true, completion: nil)
                     }
                     
